@@ -14,20 +14,21 @@ https://pythonprogramming.net/__str__-__repr__-intermediate-python-tutorial/#:~:
 Import and run pylint & pydocstyle for pep8 compliance details. I also like to use this site: http://pep8online.com/
 
 Here is some useful code for testing within your py file, something I learned in SaraW Unit 3 v 1.0.
-if __name__ == '__main__':
 
-    j = isit_float('jane')
-    print(j)
-    
-    # Setup DataFrame to test datetime_columns method
-    data = ([['11/16/2020', 'May 6, 1979', 'Nov 3, 1860', '10 Jun 1945', '10/02/1996', '1/1/03', 'June 1960', '03/3/1985'],
-            [2, 2, 1, 0, 1, 6, 6, 2]])
+    if __name__ == '__main__':
 
-    names = ['dates', 'int']
+        j = isit_float('jane')
+        print(j)
 
-    df = pd.DataFrame(data, index=names).T
+        # Setup DataFrame to test datetime_columns method
+        data = ([['11/16/2020', 'May 6, 1979', 'Nov 3, 1860', '10 Jun 1945', '10/02/1996', '1/1/03', 'June 1960', '03/3/1985'],
+                [2, 2, 1, 0, 1, 6, 6, 2]])
 
-    print (df, '\n')
+        names = ['dates', 'int']
+
+        df = pd.DataFrame(data, index=names).T
+
+        print (df, '\n')
 
     # Make class variable
     dft = datetime_columns(df, 'dates')
